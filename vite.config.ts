@@ -5,13 +5,13 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), tailwindcss()],
-  base: "/js-solucoes-financeiras/", // ← ADICIONE ESTA LINHA
+  base: "/js-solucoes-financeiras/",
+  build: {
+    outDir: "docs", // ← MUDE DE "dist" PARA "docs"
+    sourcemap: false,
+  },
   server: {
     port: 5173,
     host: true,
-  },
-  build: {
-    outDir: "dist",
-    sourcemap: false,
   },
 });
