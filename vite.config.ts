@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), tailwindcss()],
+  base: "/js-solucoes-financeiras/", // ← ADICIONE ESTA LINHA
   server: {
     port: 5173,
     host: true,
