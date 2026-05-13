@@ -5,9 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), tailwindcss()],
-  base: "/js-solucoes-financeiras/",
+  base: "./", // ← MUDE PARA "./" (ponto barra)
   build: {
-    outDir: "docs", // ← MUDE DE "dist" PARA "docs"
+    outDir: "docs",
     sourcemap: false,
   },
   server: {
